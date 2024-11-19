@@ -1,0 +1,12 @@
+services:
+  dev:
+    build:
+      dockerfile: Dockerfile
+    image: ghcr.io/yingchaoorg/local_docs-dcat-admin:main
+    privileged: false
+    container_name: local-docs-dcat-admin-dev
+    volumes:
+      - .:/usr/share/nginx/html
+    tty: true
+    ports:
+      - 34803:80

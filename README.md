@@ -14,3 +14,19 @@
 </p>
 
 Dcat Admin Docs
+
+
+## local docs 
+
+```bash
+
+docker build . --tag ghcr.io/yingchaoorg/local_docs-dcat-admin:master
+# 临时运行 (停止后删除)
+docker run -p  34803:80 --name  local-docs-dcat-admin-dev --rm ghcr.io/yingchaoorg/local_docs-dcat-admin:master
+# 后台运行
+docker run -p  34803:80 --name local-docs-dcat-admin-dev -d ghcr.io/yingchaoorg/local_docs-dcat-admin:master
+
+docker stop local-docs-dcat-admin-dev
+
+
+```
